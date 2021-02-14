@@ -49,6 +49,7 @@ function App() {
     fetch("https://www.linkedin.com/oauth/v2/accessToken", {
       method: "POST",
       headers: {
+        "access-control-allow-origin": "*",
         "content-type": "application/x-www-form-urlencoded",
       },
       body: data,
