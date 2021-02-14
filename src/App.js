@@ -59,9 +59,8 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(state?.code?.length > 0);
-    if (state?.code?.length > 0) linkedinLogin(state?.code);
-  }, [state]);
+    if (state?.code?.length > 0 && linkedinLogin) linkedinLogin(state?.code);
+  }, [state, linkedinLogin]);
 
   if (params.code || params.error) {
     return <LinkedInPopUp />;
